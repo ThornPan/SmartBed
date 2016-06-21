@@ -1,0 +1,283 @@
+
+/* --------------Reset--------------------------- */
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, figcaption, figure, 
+	footer, header, menu, nav, section, summary,
+	time, mark, audio, video {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    outline: 0;
+	    font-size: 100%;
+	    vertical-align: baseline;
+	    background: transparent;
+	}
+
+	article,aside,details,figcaption,figure,
+	footer,header,menu,nav,section { display: block; }
+
+	*,
+	*:after,
+	*:before {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	nav ul,
+	nav ol {
+	    list-style: none;
+	    list-style-image: none;
+	}
+
+	ul { list-style: none outside;    }
+	ol { list-style-position: inside; }
+
+	a {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 100%;
+	    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+		outline: none;
+		text-decoration: none;
+	    background: transparent;
+		vertical-align: baseline;
+	}
+
+	a, a > * {
+		text-decoration: none;
+		color: #BEC6CC;
+	}
+
+	a:hover {
+		color: #00c2a9;
+	}
+
+	.not-ie a {
+		-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+				transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	}
+
+	img {
+	    border: 0;
+		height: auto;
+		max-width: 100%;
+		-ms-interpolation-mode: bicubic;
+	}
+/* --------------body---------------------------- */
+	body {
+		background-image: url(../images/ISearch_bg.png);
+		background-size: cover;
+		width: 100%;
+		min-height: 568px;
+		/*background-repeat: no-repeat;
+		background-position: center bottom;
+		background-color: #fff;*/
+		color: #777;
+		font-weight: 300;
+		font-size: 15px;
+		font-family: 'Roboto', sans-serif;
+		line-height: 1.75em;
+	}
+	p {
+		margin: 0 0 1.5em;
+		padding: 0;
+		line-height: 1.75em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 15px;
+		color: #5b5e60;
+		font-family: 'Roboto', sans-serif;
+		line-height: 1.3em;
+		font-weight: normal;
+	}
+
+	h1 { font-size: 50px; }
+	h2 { font-size: 24px; }
+	h3 { font-size: 20px; }
+	h4 { font-size: 18px; }
+	h5 { font-size: 16px; }
+	h6 { font-size: 14px; }
+/* --------------header-------------------------- */
+	#header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		border-bottom: 1px solid rgba(190, 198, 204, 0.28);
+		background-color: transparent;
+		line-height: 0;
+	}
+	.header-in {
+		margin: 0 auto;
+		width: 90%;
+		text-align: justify;
+	}
+	.header-in:after {
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
+		content: "";
+	}
+
+	#logo,
+	#navigation {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#logo {
+		margin-bottom: 0;
+		font-family: 'Julius Sans One', sans-serif;
+		padding-left: 20px;
+	}
+	#logo_img {
+		float: left;
+		padding-top: 5px;
+	}
+	#header .login {
+		cursor:pointer;
+	}
+/* --------------Login--------------------------- */
+	#login {
+		position:absolute;
+		z-index:9999;
+		width: 450px;
+	}
+/*<------------------------------>*/
+	.message.warning  {
+		background: rgba(255, 255, 255, 0.33);
+		-moz-box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);
+	    -webkit-box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);
+	    box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);
+		/*margin:7% auto 0;
+		width: 35%;*/
+	}
+	.login-head {
+		padding: 2em 0;
+		background: #00c2a9;
+		position:relative;
+	}
+	.login-head h1 {
+		color: #fff;
+		font-size: 1.5em;
+		text-align: left;
+		margin: 0 23px;
+	}
+	.inset form {
+		padding: 3em 2em;
+		background: #F2F2F2;
+	}
+	.inset form li{
+		border: 2px ridge rgba(187, 185, 189, 0.11);
+		border-radius: 0.3em;
+		-webkit-border-radius:0.3em;
+		-moz-border-radius:0.3em;
+		-o-border-radius:0.3em;
+		list-style:none;
+		margin-bottom:12px;
+		background:#F0EEF0;
+	}
+	.icon{
+		background:url(../images/icons.png)  no-repeat 0px 0px;
+		height:30px;
+		width:30px;
+		display: block;
+		float: right;
+		margin: 12px 9px 9px 0px;
+	}
+	.user{
+		background: url(../images/icons.png) no-repeat 7px 1px;
+		
+	}
+	.lock{
+		background: url(../images/icons.png) no-repeat -27px 1px;
+	}
+
+	.inset input[type="text"], input[type="password"] {
+		font-family: 'Droid Sans', sans-serif;
+		width:70%;
+		padding: 0.5em 2em 0.5em 1em;
+		color: #B8B8B8;
+		font-size:20px;
+		outline: none;
+		background: none;
+		border:none;
+	}
+	.inset input[type="text"]:hover, input[type="password"]:hover{
+		color:#00917e;
+	}
+	.submit h4 a{
+		float:right;
+		font-size: 16px;
+		color: #999;
+		font-weight: 400;
+		font-family: 'Droid Sans', sans-serif;
+		margin-top: 15px;
+		margin-left: 21px;
+	}
+	.submit h4 a:hover{
+		color:#00eacc;
+	}
+	/*************************/
+	.submit{
+		padding:10px;
+	}
+	.inset input[type="submit"] {
+		float: left;
+		color: #fff;
+		cursor: pointer;
+		font-weight: 900;
+		outline: none;
+		font-family: 'Raleway', sans-serif;
+		padding: 12px 0px;
+		width: 35%;
+		font-size: 18px;
+		background:#00a892;
+		border:2px solid #00a892;
+		border-radius: 0.5em;
+		-webkit-border-radius:0.5em;
+		-moz-border-radius:0.5em;
+		-o-border-radius:0.5em;
+	}
+	.inset input[type="submit"]:hover {
+		background: #fff;
+		color:#00a892;
+		border:2px solid #00a892;
+	}
+	.close {			/*关闭按钮*/
+		background: url(../images/icons.png) no-repeat 0px 3px;
+		cursor: pointer;
+		height: 30px;
+		position: absolute;
+		right: 12px;
+		top: 34px;
+		-webkit-transition: color 0.2s ease-in-out;
+		-moz-transition: color 0.2s ease-in-out;
+		-o-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+		width: 30px;
+	}
+	/*@media (max-width:1440px){
+	.message.warning {
+			margin: 11% auto 0;
+			width: 30%;
+		}
+	}
+	@media (max-width:1366px){
+		.message.warning{
+			margin: 7% auto 0;
+			width: 35%;
+		}
+	}*/

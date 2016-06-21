@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<head>
+	<!-- Google Web Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,300italic,400,700|Julius+Sans+One|Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>后台管理——登录</title>
+	<link rel="stylesheet" href="css/style_login.css" />
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+<!-- - - - - - - - - - - - - - header - - - - - - - - - - - - - - - - -->
+<header id="header">
+	<div class="header-in">
+		<h1 id="logo"><a href="">SHU·智能床后台管理</a></h1>
+	</div>
+</header>
+<!-- - - - - - - - - - - - - - Login - - - - - - - - - - - - - - - - -->
+<div id="login">
+	<div class="message warning">
+		<div class="inset">
+			<div class="login-head">
+				<h1>智能护理床云平台</h1>
+			</div>
+			<form>
+				<li>
+					<input id="txtUserName" type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}"><a href="#" class=" icon user"></a>
+				</li>
+				<li>
+					<input id="txtPassword" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"> <a href="#" class="icon lock"></a>
+				</li>
+				<div class="submit">
+					<input type="submit" onclick="login()" value="登 录" >
+					<select id="userType">
+						<option value="USER">使用者</option>
+						<option value="FAMILY">家属</option>
+						<option value="ADMIN">管理员</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- - - - - - - - - - - - - - End - - - - - - - - - - - - - - - - -->
+</body>
+</html>

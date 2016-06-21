@@ -13,7 +13,7 @@
 
   <servlet-mapping>
     <servlet-name>sbcp</servlet-name>
-    <url-pattern>/api/*</url-pattern>
+    <url-pattern>/sbc/*</url-pattern>
   </servlet-mapping>
 
 </web-app>

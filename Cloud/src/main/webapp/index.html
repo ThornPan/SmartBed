@@ -6,9 +6,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,300italic,400,700|Julius+Sans+One|Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>后台管理——登录</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style_login.css" />
 	<script type="text/javascript" src="js/base.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/jquery-1.5.1.js"></script>
 </head>
 
 <body>
@@ -32,13 +34,19 @@
 				<li>
 					<input id="txtPassword" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"> <a href="#" class="icon lock"></a>
 				</li>
-				<div class="submit">
-					<input type="submit" onclick="login()" value="登 录" >
-					<select id="userType">
-						<option value="USER">使用者</option>
-						<option value="FAMILY">家属</option>
-						<option value="ADMIN">管理员</option>
-					</select>
+				<div class="row">
+					<div class="col-md-5">
+						<div class="submit">
+							<input type="submit" onclick="login();return false;" value="登 录" >
+						</div>
+					</div>
+					<div class="col-md-4">
+						<select name="userType" id="userType" class="form-control">
+							<option value="user">使用者</option>
+							<option value="family">家属</option>
+							<option value="admin">管理员</option>
+						</select>
+					</div>
 				</div>
 			</form>
 		</div>

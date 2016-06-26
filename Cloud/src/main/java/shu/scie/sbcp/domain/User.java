@@ -4,17 +4,17 @@ package shu.scie.sbcp.domain;
  * Created by Thorn on 2016/6/16.
  */
 public class User {
-    private int identity;
+    private int id;
     private String name;
     private int age;
     private String sex;
     private boolean status;
 
-    public void setIdentify(int identify){
-        this.identity=identify;
+    public void setId(int id){
+        this.id=id;
     }
-    public int getIdentify(){
-        return identity;
+    public int getId(){
+        return id;
     }
 
     public void setName(String name){

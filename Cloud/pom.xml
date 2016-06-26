@@ -33,26 +33,26 @@
     </resources>
 
     <plugins>
-      <plugin>
+      <!--<plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.1</version>
         <configuration>
-          <!-- http port -->
+          &lt;!&ndash; http port &ndash;&gt;
           <port>8080</port>
-          <!-- application path always starts with /-->
+          &lt;!&ndash; application path always starts with /&ndash;&gt;
           <path>/smartbed</path>
-          <!-- optional system propoerties you want to add -->
+          &lt;!&ndash; optional system propoerties you want to add &ndash;&gt;
           <systemProperties>
             <appserver.base>${project.build.directory}/appserver-base</appserver.base>
             <appserver.home>${project.build.directory}/appserver-home</appserver.home>
             <derby.system.home>${project.build.directory}/appserver-base/logs</derby.system.home>
             <java.io.tmpdir>${project.build.directory}</java.io.tmpdir>
           </systemProperties>
-          <!-- if you want to use test dependencies rather than only runtime -->
+          &lt;!&ndash; if you want to use test dependencies rather than only runtime &ndash;&gt;
           <useTestClasspath>false</useTestClasspath>
         </configuration>
-      </plugin>
+      </plugin>-->
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -146,6 +146,14 @@
       <artifactId>spring-test</artifactId>
       <version>${org.springframework.version}</version>
       <scope>test</scope>
+    </dependency>
+
+    <!--for servlet-->
+    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
     </dependency>
 
     <!--for hibernate-->
@@ -246,7 +254,15 @@
     </dependency>
 
     <!--for json parser-->
+
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
     <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20090211</version>
+    </dependency>
+
+    <!--<dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-asl</artifactId>
       <version>1.9.13</version>
@@ -265,12 +281,12 @@
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-lgpl</artifactId>
       <version>1.9.13</version>
-    </dependency>
+    </dependency>-->
 
-    <dependency>
+    <!--<dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.1</version>
-    </dependency>
+    </dependency>-->
   </dependencies>
 </project>

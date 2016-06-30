@@ -2,14 +2,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	  <script type="text/javascript" src="../js/jquery-3.0.0.js"></script>
+	  <link href="../css/bootstrap.min.css" rel="stylesheet">
 	  <script type="text/javascript" src="../js/global.js"></script>
 	  <script type="text/javascript" src="../js/user.js"></script>
 	
   </head>
   
-  <body>
+  <body onload="getUserMedicalHistoryList()">
     
 	<div class="tabbable" id="tabs-686362">
 		<ul class="nav nav-tabs">
@@ -18,83 +19,56 @@
 			</li>
 		</ul>
 		<div class="tab-content">
-			<div class="tab-pane active" id="panel-115200">
+			<div class="tab-pane active" id="medicalHistoryListBody">
+
+				<!--<br>
+
+				<div>
+					<h4>
+						2016-04-18 17:59:43
+					</h4>
+					<p>
+						状腺无肿大，无颈静脉怒张。胸廓对称，无压疼，双侧呼吸动度相等，双肺呼吸音清，未闻及干湿性啰音。心前区无隆起，无异常心尖搏动。心音有力，心率76次/分，律齐，各瓣膜听诊未闻及病理性杂音。腹平坦，未见肠型及蠕动波，无腹壁静脉曲张；腹肌软无压疼，肝脾肋下未及，肝脾区无压疼，移动性浊音阴性，肠鸣音正常。外生殖器及肛门未见明显异常。脊柱及四肢见专科情况。腹壁反射存在，膝跟腱反射存在，巴宾斯基征、脑膜刺激征阴性。
+					</p>
+				</div>
 
 				<br>
 
 				<div>
-					<div>
-						<h4>
-							2016-04-18 17:59:43
-						</h4>状腺无肿大，无颈静脉怒张。胸廓对称，无压疼，双侧呼吸动度相等，双肺呼吸音清，未闻及干湿性啰音。心前区无隆起，无异常心尖搏动。心音有力，心率76次/分，律齐，各瓣膜听诊未闻及病理性杂音。腹平坦，未见肠型及蠕动波，无腹壁静脉曲张；腹肌软无压疼，肝脾肋下未及，肝脾区无压疼，移动性浊音阴性，肠鸣音正常。外生殖器及肛门未见明显异常。脊柱及四肢见专科情况。腹壁反射存在，膝跟腱反射存在，巴宾斯基征、脑膜刺激征阴性。
-					</div>
-				</div>
-
-				<br>
-
-				<div>
-					<div>
-						<h4>
-							2016-04-18 19:18:17
-						</h4>患者因“外伤后头疼头晕伴左下肢疼痛1小时余”入院。患者神志清，精神可，双瞳孔等大等圆，直径约3mm对光反应灵敏，左小腿有明显皮下淤血斑，青紫，压疼，未触及骨擦音及骨擦感，皮肤浅感觉正常，余肢体未见明显异常。明确外伤史，结合查体及辅助检查，同意现有诊断及治疗方案,但同时加强对患者病情观察,，以防止各种迟发性疾病发生。
-					</div>
-				</div>
-				<!--<div class="media">
-					 <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-					<div class="media-body">
-						<h4 class="media-heading">
-							病历2 2015年3月24日
-						</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-						<div class="media">
-							 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-							<div class="media-body">
-								<h4 class="media-heading">
-									Nested media heading
-								</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="media">
-					 <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-					<div class="media-body">
-						<h4 class="media-heading">
-							病历3 2016年4月24日
-						</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-						<div class="media">
-							 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-							<div class="media-body">
-								<h4 class="media-heading">
-									Nested media heading
-								</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-							</div>
-						</div>
-					</div>
+					<h4>
+						2016-04-18 19:18:17
+					</h4>
+					<p>
+						患者因“外伤后头疼头晕伴左下肢疼痛1小时余”入院。患者神志清，精神可，双瞳孔等大等圆，直径约3mm对光反应灵敏，左小腿有明显皮下淤血斑，青紫，压疼，未触及骨擦音及骨擦感，皮肤浅感觉正常，余肢体未见明显异常。明确外伤史，结合查体及辅助检查，同意现有诊断及治疗方案,但同时加强对患者病情观察,，以防止各种迟发性疾病发生。
+					</p>
 				</div>-->
-				<ul class="pagination">
-					<li>
-						<a href="#">Prev</a>
-					</li>
-					<li>
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">2</a>
-					</li>
-					<li>
-						<a href="#">3</a>
-					</li>
-					<li>
-						<a href="#">4</a>
-					</li>
-					<li>
-						<a href="#">5</a>
-					</li>
-					<li>
-						<a href="#">Next</a>
-					</li>
-				</ul>
+
 			</div>
+
+			<ul class="pagination">
+				<li>
+					<a href="#">Prev</a>
+				</li>
+				<li>
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+				<li>
+					<a href="#">Next</a>
+				</li>
+			</ul>
+
 		</div>
 	</div>
   </body>

@@ -21,13 +21,23 @@
 };*/
 
 function getUrl(){
-	var urlRemote="http://www.crimsonthorn.top:8080/smartbed/";
-	var urlLocal="http://localhost:8080/";
-	return urlRemote;
+	var urlRemote="http://139.129.32.240:8080/smartbed";
+	var urlLocalMvn="http://localhost:8080/smartbed";
+	var urlLocalIde="http://localhost:8080";
+	return urlLocalIde;
 }
 
-
-
+function dataConvert(timestamp){
+	var timestamp =timestamp;
+	var d = new Date(timestamp*1);    //根据时间戳生成的时间对象
+	var date = (d.getFullYear()) + "-" +
+		(d.getMonth() + 1) + "-" +
+		(d.getDate()) + " " +
+		(d.getHours()) + ":" +
+		(d.getMinutes()) + ":" +
+		(d.getSeconds());
+	return date;
+}
 
 function login(){
 	var userid=document.getElementById("txtUserName").value;
@@ -40,7 +50,7 @@ function login(){
 		$.ajax({
 			type: "POST",
 			url:getUrl()+'/api/login',
-			data:{id: userid,pw:userpw,type:usertype},
+			data:{userId: userid,userPw:userpw,userType:usertype},
 			success: function(msg){
 				console.log(msg);
 				if(msg=="success"&&usertype=="user"){

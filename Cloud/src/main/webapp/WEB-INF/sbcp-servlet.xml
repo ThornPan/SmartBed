@@ -3,20 +3,60 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+       http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/jee
+       http://www.springframework.org/schema/jee/spring-jee-4.0.xsd">
 
     <context:component-scan base-package="shu.scie.sbcp.controller"/>
+    <context:component-scan base-package="shu.scie.sbcp.service"/>
+    <mvc:annotation-driven />
 
-    <bean id="viewResolver"
+    <!--<bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/test/"/>
         <property name="suffix" value=".jsp"/>
+    </bean>-->
+
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list >
+                <ref bean="mappingJacksonHttpMessageConverter" />
+            </list>
+        </property>
+    </bean>
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <jee:jndi-lookup id="dataSource"
+        jndi-name="jndi/sbDS"
+        resource-ref="true"/>
+
+    <bean id="GlobalDao"
+          class="shu.scie.sbcp.DAO.JdbcGlobalDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="AdminDao"
+          class="shu.scie.sbcp.DAO.JdbcAdminDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="UserDao"
+          class="shu.scie.sbcp.DAO.JdbcUserDao">
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
 </beans>

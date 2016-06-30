@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  */
 public class MedicalHistory {
     private int id;
-    private Timestamp date;
+    private Timestamp addTime;
     private String content;
 
     public void setId(int id){
@@ -17,11 +17,11 @@ public class MedicalHistory {
         return id;
     }
 
-    public void setDate(Timestamp date){
-        this.date=date;
+    public void setAddTime(Timestamp addTime){
+        this.addTime=addTime;
     }
-    public Timestamp getDate(){
-        return date;
+    public Timestamp getAddTime(){
+        return addTime;
     }
 
     public void setContent(String content){

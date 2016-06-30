@@ -33,26 +33,26 @@
     </resources>
 
     <plugins>
-      <!--<plugin>
+      <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.1</version>
         <configuration>
-          &lt;!&ndash; http port &ndash;&gt;
+          <!-- http port -->
           <port>8080</port>
-          &lt;!&ndash; application path always starts with /&ndash;&gt;
+          <!-- application path always starts with /-->
           <path>/smartbed</path>
-          &lt;!&ndash; optional system propoerties you want to add &ndash;&gt;
+          <!-- optional system propoerties you want to add -->
           <systemProperties>
             <appserver.base>${project.build.directory}/appserver-base</appserver.base>
             <appserver.home>${project.build.directory}/appserver-home</appserver.home>
             <derby.system.home>${project.build.directory}/appserver-base/logs</derby.system.home>
             <java.io.tmpdir>${project.build.directory}</java.io.tmpdir>
           </systemProperties>
-          &lt;!&ndash; if you want to use test dependencies rather than only runtime &ndash;&gt;
+          <!-- if you want to use test dependencies rather than only runtime -->
           <useTestClasspath>false</useTestClasspath>
         </configuration>
-      </plugin>-->
+      </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -154,6 +154,7 @@
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
+      <scope>provided</scope>
     </dependency>
 
     <!--for hibernate-->
@@ -282,6 +283,28 @@
       <artifactId>jackson-mapper-lgpl</artifactId>
       <version>1.9.13</version>
     </dependency>-->
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.6.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.6.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.6.3</version>
+    </dependency>
+
 
     <!--<dependency>
       <groupId>com.google.code.gson</groupId>

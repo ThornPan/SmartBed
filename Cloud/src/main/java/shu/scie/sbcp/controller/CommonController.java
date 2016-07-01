@@ -19,6 +19,13 @@ public class CommonController {
     @Autowired
     private GlobalService globalService;
 
+    @RequestMapping(value = "/test",method = RequestMethod.POST)
+    @ResponseBody
+    public String test(@RequestParam String str){
+        System.out.println(str);
+        return "success";
+    }
+
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public String login(HttpSession session, @RequestParam Integer userId,

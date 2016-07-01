@@ -21,10 +21,10 @@
 };*/
 
 function getUrl(){
-	var urlRemote="http://139.129.32.240:8080/smartbed";
+	var urlRemote="http://www.znhlc.xyz:8080/smartbed";
 	var urlLocalMvn="http://localhost:8080/smartbed";
 	var urlLocalIde="http://localhost:8080";
-	return urlLocalIde;
+	return urlRemote;
 }
 
 function dataConvert(timestamp){

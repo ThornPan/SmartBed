@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import shu.scie.sbcp.domain.MedicalHistory;
+import shu.scie.sbcp.domain.Parameter;
 import shu.scie.sbcp.domain.User;
 import shu.scie.sbcp.service.UserService;
 
@@ -47,6 +48,14 @@ public class UserController {
     public List<MedicalHistory> getMedicalHistoryList(HttpSession session, @RequestParam String data){
         int id=getUserIdPara(session,data);
         List<MedicalHistory> list=userService.getMedicalHistoryList(id);
+        return list;
+    }
+
+    @RequestMapping(value = "/getParameterList",method = RequestMethod.POST)
+    @ResponseBody
+    public List<Parameter> getParameterList(HttpSession session,@RequestParam String data){
+        int id=getUserIdPara(session,data);
+        List<Parameter> list=userService.getParameterList(id);
         return list;
     }
 }

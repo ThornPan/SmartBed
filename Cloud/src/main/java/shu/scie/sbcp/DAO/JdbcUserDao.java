@@ -33,4 +33,9 @@ public class JdbcUserDao extends JdbcDaoSupport implements UserDao {
         List<Parameter> list=(List<Parameter>)getJdbcTemplate().query(sql,new ParameterRowMapper());
         return list;
     }
+
+    public void userLeaveBed(int id){
+        String sql="update user set status=2 where id="+id;
+        getJdbcTemplate().update(sql);
+    }
 }

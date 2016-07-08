@@ -16,6 +16,10 @@ function showAdminInfo(){
     })
 }
 
+function refreshUserList(){
+    setInterval("getUserList()",1000);
+}
+
 function getUserList(){
     $.ajax({
         type:"POST",
@@ -24,11 +28,17 @@ function getUserList(){
         dataType:'json',
         success:function(msg){
             console.log(msg);
-            //var count=msg.count;
             var count=msg.length;
             $("#userList_body").empty();
             for(var i=0;i<count;i++){
                 var para = document.createElement("tr");
+                if(msg[i].status==1){
+                    $(para).attr("class","success");
+                }else if(msg[i].status==2){
+                    $(para).attr("class","danger");
+                }else if(msg[i].status==3){
+                    $(para).attr("class","warning");
+                }
 
                 var node = document.createElement("td");
                 var content= document.createElement("a");

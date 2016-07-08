@@ -13,4 +13,5 @@ public interface UserDao {
     public User getUserInfo(int id);
     public List<MedicalHistory> getMedicalHistoryList(int id);
     public List<Parameter> getParameterList(int id);
+    public void userLeaveBed(int id);
 }

@@ -58,4 +58,11 @@ public class UserController {
         List<Parameter> list=userService.getParameterList(id);
         return list;
     }
+
+    @RequestMapping(value = "/userLeaveBed",method = RequestMethod.POST)
+    @ResponseBody
+    public String userLeaveBed(@RequestParam int userId){
+        userService.userLeaveBed(userId);
+        return "success";
+    }
 }

@@ -8,7 +8,7 @@ public class User {
     private String name;
     private int age;
     private String sex;
-    private boolean status;
+    private int status;
 
     public void setId(int id){
         this.id=id;
@@ -38,10 +38,10 @@ public class User {
         return sex;
     }
 
-    public void setStatus(boolean status){
+    public void setStatus(int status){
         this.status=status;
     }
-    public boolean getStatus(){
+    public int getStatus(){
         return status;
     }
 }

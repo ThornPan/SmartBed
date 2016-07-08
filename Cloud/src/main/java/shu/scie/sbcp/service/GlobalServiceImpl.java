@@ -24,5 +24,13 @@ public class GlobalServiceImpl implements GlobalService {
         }
     }
 
+    public void userLogin(int id){
+        globalDao.userLogin(id);
+    }
+
+    public void userLogout(int id){
+        globalDao.userLogout(id);
+    }
+
 
 }

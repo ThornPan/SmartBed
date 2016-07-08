@@ -29,12 +29,16 @@ public class CommonController {
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public String login(HttpSession session, @RequestParam Integer userId,
-                 @RequestParam String userPw, @RequestParam String userType) {
+                 @RequestParam String userPw, @RequestParam String userType,
+                        @RequestParam String source) {
         String success="success";
         String fail="fail";
         if(globalService.checkAccount(userType,userId,userPw)){
             session.setAttribute("id",userId);
             session.setAttribute("type",userType);
+            if(source.equals("device")){
+                globalService.userLogin(userId);
+            }
             return success;
         }else{
             return fail;
@@ -42,9 +46,20 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/logout",method = RequestMethod.POST)
-    public @ResponseBody String logout(HttpSession session){
+    public @ResponseBody String logout(HttpSession session,@RequestParam String source){
+        int id=(Integer)session.getAttribute("id");
+        String type=(String) session.getAttribute("type");
+        if(source.equals("device")){
+            globalService.userLogout(id);
+        }
         session.removeAttribute("id");
         session.removeAttribute("type");
+        return "success";
+    }
+
+    @RequestMapping(value = "/logoutFromApp",method = RequestMethod.POST)
+    public @ResponseBody String logoutFromApp(@RequestParam int id){
+        globalService.userLogout(id);
         return "success";
     }
 }

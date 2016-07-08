@@ -34,7 +34,7 @@ public class JdbcAdminDao extends JdbcDaoSupport implements AdminDao {
     }
 
     public List<User> getUserList(){
-        String sql="select id,name,age,sex from user order by id desc";
+        String sql="select id,name,age,sex,status from user order by id desc";
         List<User> users=(List<User>)getJdbcTemplate().query(sql,new UserRowMapper());
         return users;
     }

@@ -19,4 +19,14 @@ public class JdbcGlobalDao extends JdbcDaoSupport implements GlobalDao {
         String pw=(String)getJdbcTemplate().queryForObject(sql,String.class);
         return pw;
     }
+
+    public void userLogin(int id){
+        String sql="update user set status=1 where id="+id;
+        getJdbcTemplate().update(sql);
+    }
+
+    public void userLogout(int id){
+        String sql="update user set status=0 where id="+id;
+        getJdbcTemplate().update(sql);
+    }
 }

@@ -5,4 +5,6 @@ package shu.scie.sbcp.service;
  */
 public interface GlobalService {
     public boolean checkAccount(String type,int id,String pw);
+    public void userLogin(int id);
+    public void userLogout(int id);
 }

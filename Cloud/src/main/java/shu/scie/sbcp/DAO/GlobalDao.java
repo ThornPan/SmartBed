@@ -6,4 +6,6 @@ package shu.scie.sbcp.DAO;
 public interface GlobalDao {
     public String getUserName(String type,int id);
     public String getUserPw(String type,int id);
+    public void userLogin(int id);
+    public void userLogout(int id);
 }

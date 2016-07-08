@@ -28,4 +28,8 @@ public class UserServiceImpl implements UserService {
     public List<Parameter> getParameterList(int id){
         return userDao.getParameterList(id);
     }
+
+    public void userLeaveBed(int id){
+        userDao.userLeaveBed(id);
+    }
 }

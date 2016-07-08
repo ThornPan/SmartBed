@@ -43,6 +43,7 @@ function login(){
 	var userid=document.getElementById("txtUserName").value;
 	var userpw=document.getElementById("txtPassword").value;
 	var usertype=document.getElementById("userType").value;
+	var source="website";
 	console.log(userid+userpw+usertype);
 	if(userid=="Username"||userpw=="Password"){
 		alert("请填写账号")
@@ -50,7 +51,7 @@ function login(){
 		$.ajax({
 			type: "POST",
 			url:getUrl()+'/api/login',
-			data:{userId: userid,userPw:userpw,userType:usertype},
+			data:{userId: userid,userPw:userpw,userType:usertype,source:source},
 			success: function(msg){
 				console.log(msg);
 				if(msg=="success"&&usertype=="user"){
@@ -71,7 +72,7 @@ function logout(){
 	$.ajax({
 		type:"POST",
 		url:getUrl()+'/api/logout',
-		data:{},
+		data:{source:"website"},
 		success:function(msg){
 			if(msg=="success"){
 				window.location.href=getUrl();

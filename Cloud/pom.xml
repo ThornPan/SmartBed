@@ -17,6 +17,7 @@
 
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
+
     <resources>
       <resource>
         <filtering>false</filtering>
@@ -27,6 +28,14 @@
           <include>*.properties</include>
         </includes>
       </resource>
+
+      <!--<resource>
+        <targetPath>WEB-INF/lib</targetPath>
+        <directory>${project.basedir}/lib</directory>
+        <includes>
+          <include>**/*.jar</include>
+        </includes>
+      </resource>-->
       <!-- resource> <filtering>false</filtering> <directory>${basedir}/bin</directory>
           <targetPath>${project.build.directory}/lib</targetPath> <includes> <include>*.jar</include>
           </includes> </resource -->
@@ -73,6 +82,46 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <webResources>
+            <resource>
+              <directory>${project.basedir}/lib</directory>
+              <targetPath>WEB-INF/lib</targetPath>
+              <filtering>false</filtering>
+              <includes>
+                <include>**/*.jar</include>
+              </includes>
+            </resource>
+          </webResources>
+        </configuration>
+        <version>2.1.1</version>
+      </plugin>
+
+      <!--<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+              <finalName>External-jar-with-dependencies</finalName>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>-->
+
+
 
     </plugins>
     <finalName>smartbed</finalName>
@@ -311,5 +360,14 @@
       <artifactId>gson</artifactId>
       <version>2.1</version>
     </dependency>-->
+
+    <dependency>
+      <groupId>org.Alibaba</groupId>
+      <artifactId>taobao-sdk</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/taobao-sdk-java-auto.jar</systemPath>
+    </dependency>
+
   </dependencies>
 </project>

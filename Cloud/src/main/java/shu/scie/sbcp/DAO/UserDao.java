@@ -1,9 +1,8 @@
 package shu.scie.sbcp.DAO;
 
-import shu.scie.sbcp.domain.MedicalHistory;
-import shu.scie.sbcp.domain.Parameter;
-import shu.scie.sbcp.domain.User;
+import shu.scie.sbcp.domain.*;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -13,5 +12,11 @@ public interface UserDao {
     public User getUserInfo(int id);
     public List<MedicalHistory> getMedicalHistoryList(int id);
     public List<Parameter> getParameterList(int id);
-    public void userLeaveBed(int id);
+    public void userLeaveBed(int id,long addTime);
+    public void saveParameter(Parameter parameter);
+    public void saveTurnRecord(TurnRecord turnRecord);
+    public void saveToiletRecord(ToiletRecord toiletRecord);
+    public void saveMedicineRecord(MedicineRecord medicineRecord);
+    public void updateUserInfo(User user);
+    public String getUserFamilyNum(int id);
 }

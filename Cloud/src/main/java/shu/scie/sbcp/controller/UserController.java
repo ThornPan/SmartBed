@@ -1,11 +1,11 @@
 package shu.scie.sbcp.controller;
 
+import com.sun.javafx.logging.PulseLogger;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import shu.scie.sbcp.domain.MedicalHistory;
 import shu.scie.sbcp.domain.Parameter;
 import shu.scie.sbcp.domain.User;
@@ -61,8 +61,44 @@ public class UserController {
 
     @RequestMapping(value = "/userLeaveBed",method = RequestMethod.POST)
     @ResponseBody
-    public String userLeaveBed(@RequestParam int userId){
-        userService.userLeaveBed(userId);
+    public String userLeaveBed(@RequestParam int userId,@RequestParam long addTime)throws JSONException{
+        userService.userLeaveBed(userId,addTime);
+        return "success";
+    }
+
+    @RequestMapping(value = "/uploadParameter",method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadParameter(@RequestParam JSONObject jsonParameter)throws JSONException{
+        userService.uploadParameter(jsonParameter);
+        return "success";
+    }
+
+    @RequestMapping(value = "/uploadTurnRecord",method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadTurnRecord(@RequestParam JSONObject jsonTurnRecord)throws JSONException{
+        userService.uploadTurnRecord(jsonTurnRecord);
+        return "success";
+    }
+
+    @RequestMapping(value = "/uploadToiletRecord",method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadToiletRecord(@RequestParam JSONObject jsonToiletRecord)throws JSONException{
+        userService.uploadToiletRecord(jsonToiletRecord);
+        return "success";
+    }
+
+    @RequestMapping(value = "/uploadMedicineRecord",method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadMedicineRecord(@RequestParam JSONObject jsonMedicineRecord)throws JSONException{
+        userService.uploadMedicineRecord(jsonMedicineRecord);
+        return "success";
+    }
+
+    @RequestMapping(value = "/updateUserInfo",method = RequestMethod.POST)
+    @ResponseBody
+    public String updateUserInfo(@RequestParam JSONObject jsonUserInfo)throws JSONException{
+        System.out.println(jsonUserInfo.toString());
+        userService.updateUserInfo(jsonUserInfo);
         return "success";
     }
 }

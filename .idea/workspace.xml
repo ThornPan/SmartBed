@@ -32,8 +32,10 @@
         <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
-              <folding />
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding>
+                <marker date="1469715739832" expanded="true" signature="3697:3732" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,82 +44,41 @@
         <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/JdbcUserDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
               <folding>
-                <marker date="1468421624158" expanded="true" signature="567:616" placeholder="select id,na... user" />
-                <marker date="1468421624158" expanded="true" signature="816:882" placeholder="select * fro... medicalhistory" />
-                <marker date="1468421624158" expanded="true" signature="1102:1165" placeholder="select * fro... pararecord" />
-                <marker date="1468421624158" expanded="true" signature="1368:1402" placeholder="update user " />
-                <marker date="1468421624158" expanded="true" signature="1468:1533" placeholder="insert into alarmrecord... " />
-                <marker date="1468421624158" expanded="true" signature="1697:1789" placeholder="select phone... " />
-                <marker date="1468421624158" expanded="true" signature="1735:1781" placeholder="select relat... relation" />
-                <marker date="1468421624158" expanded="true" signature="1735:1782" placeholder="select relat... relation" />
-                <marker date="1468421624158" expanded="true" signature="2153:2220" placeholder="insert into pararecord... " />
-                <marker date="1468421624158" expanded="true" signature="2787:2821" placeholder="insert into turnrecord... " />
-                <marker date="1468421624158" expanded="true" signature="2994:3030" placeholder="insert into toiletrecord... " />
-                <marker date="1468421624158" expanded="true" signature="3213:3255" placeholder="insert into medicinerecord... " />
-                <marker date="1468421624158" expanded="true" signature="3542:3599" placeholder="update user " />
+                <marker date="1468906968594" expanded="true" signature="567:616" placeholder="select id,na... user" />
+                <marker date="1468906968594" expanded="true" signature="816:882" placeholder="select * fro... medicalhistory" />
+                <marker date="1468906968594" expanded="true" signature="1102:1165" placeholder="select * fro... pararecord" />
+                <marker date="1468906968594" expanded="true" signature="1368:1402" placeholder="update user " />
+                <marker date="1468906968594" expanded="true" signature="1468:1533" placeholder="insert into alarmrecord... " />
+                <marker date="1468906968594" expanded="true" signature="1697:1789" placeholder="select phone... family" />
+                <marker date="1468906968594" expanded="true" signature="1735:1782" placeholder="select relat... relation" />
+                <marker date="1468906968594" expanded="true" signature="2153:2220" placeholder="insert into pararecord... " />
+                <marker date="1468906968594" expanded="true" signature="2787:2821" placeholder="insert into turnrecord... " />
+                <marker date="1468906968594" expanded="true" signature="2994:3030" placeholder="insert into toiletrecord... " />
+                <marker date="1468906968594" expanded="true" signature="3213:3255" placeholder="insert into medicinerecord... " />
+                <marker date="1468906968594" expanded="true" signature="3542:3599" placeholder="update user " />
+                <marker date="1468906968594" expanded="true" signature="3694:3702" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserService.java">
+      <file leaf-file-name="UserIndex.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cloud/src/main/webapp/user/UserIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.097826086">
+              <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserServiceImpl.java">
+      <file leaf-file-name="ParameterDetection.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cloud/src/main/webapp/user/ParameterDetection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6181172">
-              <caret line="114" column="48" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/domain/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="e#237#238#0" expanded="false" />
-                <element signature="e#263#264#0" expanded="false" />
-                <element signature="e#287#288#0" expanded="false" />
-                <element signature="e#312#313#0" expanded="false" />
-                <element signature="e#351#352#0" expanded="false" />
-                <element signature="e#381#382#0" expanded="false" />
-                <element signature="e#410#411#0" expanded="false" />
-                <element signature="e#437#438#0" expanded="false" />
-                <element signature="e#471#472#0" expanded="false" />
-                <element signature="e#499#500#0" expanded="false" />
-                <element signature="e#524#525#0" expanded="false" />
-                <element signature="e#550#551#0" expanded="false" />
-                <element signature="e#587#588#0" expanded="false" />
-                <element signature="e#615#616#0" expanded="false" />
-                <element signature="e#643#644#0" expanded="false" />
-                <element signature="e#669#670#0" expanded="false" />
-                <element signature="e#709#710#0" expanded="false" />
-                <element signature="e#743#744#0" expanded="false" />
-                <element signature="e#771#772#0" expanded="false" />
-                <element signature="e#800#801#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state vertical-scroll-proportion="-3.0">
+              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -168,7 +129,6 @@
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/domain/MedicalHistory.java" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/RowMapper/MedicalHistoryRowMapper.java" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/DataBaseOperation.java" />
-        <option value="$PROJECT_DIR$/Cloud/src/main/webapp/user/UserIndex.html" />
         <option value="$PROJECT_DIR$/Cloud/src/main/webapp/user/MedicalHistory.html" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/RowMapper/ParameterRowMapper.java" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/domain/Parameter.java" />
@@ -193,9 +153,10 @@
         <option value="$PROJECT_DIR$/Cloud/src/main/webapp/WEB-INF/sbcp-servlet.xml" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/UserDao.java" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserService.java" />
-        <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/controller/UserController.java" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/JdbcUserDao.java" />
         <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/Cloud/src/main/webapp/user/UserIndex.html" />
+        <option value="$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -295,8 +256,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -323,8 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -360,6 +319,80 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartBed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartBed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartBed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -384,102 +417,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sbcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartBed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cloud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sbcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartBed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cloud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sbcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartBed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cloud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sbcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,7 +435,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32068965" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SBCPSocket" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -1153,42 +1098,44 @@
       <workItem from="1468397152079" duration="18000" />
       <workItem from="1468399258147" duration="1220000" />
       <workItem from="1468419096318" duration="3199000" />
+      <workItem from="1468907302487" duration="1423000" />
+      <workItem from="1469715347698" duration="842000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159570000" />
+    <option name="totallyTimeSpent" value="161835000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26504752" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25736433" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23489584" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.374868" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22604166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26504752" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.374868" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1307,20 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3275862">
           <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cloud/src/main/webapp/user/UserIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cloud/src/main/webapp/user/ParameterDetection.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1505,28 +1438,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#237#238#0" expanded="false" />
-            <element signature="e#263#264#0" expanded="false" />
-            <element signature="e#287#288#0" expanded="false" />
-            <element signature="e#312#313#0" expanded="false" />
-            <element signature="e#351#352#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#410#411#0" expanded="false" />
-            <element signature="e#437#438#0" expanded="false" />
-            <element signature="e#471#472#0" expanded="false" />
-            <element signature="e#499#500#0" expanded="false" />
-            <element signature="e#524#525#0" expanded="false" />
-            <element signature="e#550#551#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#615#616#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-            <element signature="e#709#710#0" expanded="false" />
-            <element signature="e#743#744#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-            <element signature="e#800#801#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1541,7 +1453,7 @@
     <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1549,15 +1461,7 @@
     <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1566,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47957373">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1574,7 +1477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6927176">
           <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1582,7 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321492">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1590,39 +1491,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46714032">
           <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
-          <folding>
-            <marker date="1467978728591" expanded="true" signature="885:914" placeholder="select * fro... admin" />
-            <marker date="1467978728591" expanded="true" signature="1094:1150" placeholder="select id,na... user" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/DAO/JdbcUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding>
-            <marker date="1468421624158" expanded="true" signature="567:616" placeholder="select id,na... user" />
-            <marker date="1468421624158" expanded="true" signature="816:882" placeholder="select * fro... medicalhistory" />
-            <marker date="1468421624158" expanded="true" signature="1102:1165" placeholder="select * fro... pararecord" />
-            <marker date="1468421624158" expanded="true" signature="1368:1402" placeholder="update user " />
-            <marker date="1468421624158" expanded="true" signature="1468:1533" placeholder="insert into alarmrecord... " />
-            <marker date="1468421624158" expanded="true" signature="1697:1789" placeholder="select phone... " />
-            <marker date="1468421624158" expanded="true" signature="1735:1781" placeholder="select relat... relation" />
-            <marker date="1468421624158" expanded="true" signature="1735:1782" placeholder="select relat... relation" />
-            <marker date="1468421624158" expanded="true" signature="2153:2220" placeholder="insert into pararecord... " />
-            <marker date="1468421624158" expanded="true" signature="2787:2821" placeholder="insert into turnrecord... " />
-            <marker date="1468421624158" expanded="true" signature="2994:3030" placeholder="insert into toiletrecord... " />
-            <marker date="1468421624158" expanded="true" signature="3213:3255" placeholder="insert into medicinerecord... " />
-            <marker date="1468421624158" expanded="true" signature="3542:3599" placeholder="update user " />
+            <marker date="1468906968594" expanded="true" signature="567:616" placeholder="select id,na... user" />
+            <marker date="1468906968594" expanded="true" signature="816:882" placeholder="select * fro... medicalhistory" />
+            <marker date="1468906968594" expanded="true" signature="1102:1165" placeholder="select * fro... pararecord" />
+            <marker date="1468906968594" expanded="true" signature="1368:1402" placeholder="update user " />
+            <marker date="1468906968594" expanded="true" signature="1468:1533" placeholder="insert into alarmrecord... " />
+            <marker date="1468906968594" expanded="true" signature="1697:1789" placeholder="select phone... family" />
+            <marker date="1468906968594" expanded="true" signature="1735:1782" placeholder="select relat... relation" />
+            <marker date="1468906968594" expanded="true" signature="2153:2220" placeholder="insert into pararecord... " />
+            <marker date="1468906968594" expanded="true" signature="2787:2821" placeholder="insert into turnrecord... " />
+            <marker date="1468906968594" expanded="true" signature="2994:3030" placeholder="insert into toiletrecord... " />
+            <marker date="1468906968594" expanded="true" signature="3213:3255" placeholder="insert into medicinerecord... " />
+            <marker date="1468906968594" expanded="true" signature="3542:3599" placeholder="update user " />
+            <marker date="1468906968594" expanded="true" signature="3694:3702" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/service/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/Cloud/src/main/java/shu/scie/sbcp/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6181172">
-          <caret line="114" column="48" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <marker date="1469715739832" expanded="true" signature="3697:3732" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cloud/src/main/webapp/user/ParameterDetection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cloud/src/main/webapp/user/UserIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.097826086">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
           <folding />
         </state>
       </provider>

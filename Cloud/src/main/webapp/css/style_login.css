@@ -154,6 +154,9 @@
 		position:absolute;
 		z-index:9999;
 		width: 450px;
+		left:50%;top:50%;
+		margin-left: -225px;
+		margin-top: -200px;
 	}
 /*<------------------------------>*/
 	.message.warning  {

@@ -100,5 +100,6 @@ public class UserController {
         System.out.println(jsonUserInfo.toString());
         userService.updateUserInfo(jsonUserInfo);
         return "success";
+
     }
 }

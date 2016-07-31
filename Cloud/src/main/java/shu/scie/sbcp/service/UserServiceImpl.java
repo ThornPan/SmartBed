@@ -43,6 +43,22 @@ public class UserServiceImpl implements UserService {
         return userDao.getParameterList(id);
     }
 
+    public List<AlarmRecord> getAlarmList(int id){
+        return userDao.getAlarmList(id);
+    }
+
+    public List<TurnRecord> getTurnList(int id){
+        return userDao.getTurnList(id);
+    }
+
+    public List<MedicineRecord> getMedicineList(int id){
+        return userDao.getMedicineList(id);
+    }
+
+    public List<ToiletRecord> getToiletList(int id){
+        return userDao.getToiletList(id);
+    }
+
     public void userLeaveBed(int id,long addTime)throws JSONException{
         userDao.userLeaveBed(id,addTime);
         String nums=userDao.getUserFamilyNum(id);

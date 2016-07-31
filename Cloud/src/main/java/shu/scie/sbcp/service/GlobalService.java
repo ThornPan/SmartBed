@@ -7,4 +7,6 @@ public interface GlobalService {
     public boolean checkAccount(String type,int id,String pw);
     public void userLogin(int id);
     public void userLogout(int id);
+    boolean checkFamilyID(String id);
+    void insertFamily(String id,String name,String pw,String phone);
 }

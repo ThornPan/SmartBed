@@ -4,11 +4,10 @@ import com.sun.javafx.logging.PulseLogger;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.quartz.SimpleTriggerBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import shu.scie.sbcp.domain.MedicalHistory;
-import shu.scie.sbcp.domain.Parameter;
-import shu.scie.sbcp.domain.User;
+import shu.scie.sbcp.domain.*;
 import shu.scie.sbcp.service.UserService;
 
 import javax.servlet.http.HttpSession;
@@ -56,6 +55,38 @@ public class UserController {
     public List<Parameter> getParameterList(HttpSession session,@RequestParam String data){
         int id=getUserIdPara(session,data);
         List<Parameter> list=userService.getParameterList(id);
+        return list;
+    }
+
+    @RequestMapping(value = "/getAlarmList",method = RequestMethod.POST)
+    @ResponseBody
+    public List<AlarmRecord> getAlarmList(HttpSession session,@RequestParam String data){
+        int id = getUserIdPara(session,data);
+        List<AlarmRecord> list = userService.getAlarmList(id);
+        return list;
+    }
+
+    @RequestMapping(value = "/getTurnList",method = RequestMethod.POST)
+    @ResponseBody
+    public List<TurnRecord> getTurnList(HttpSession session, @RequestParam String data){
+        int id = getUserIdPara(session,data);
+        List<TurnRecord> list = userService.getTurnList(id);
+        return list;
+    }
+
+    @RequestMapping(value = "/getMedicineList",method = RequestMethod.POST)
+    @ResponseBody
+    public List<MedicineRecord> getMedicineList(HttpSession session,@RequestParam String data){
+        int id = getUserIdPara(session,data);
+        List<MedicineRecord> list = userService.getMedicineList(id);
+        return list;
+    }
+
+    @RequestMapping(value = "/getToiletList",method = RequestMethod.POST)
+    @ResponseBody
+    public List<ToiletRecord> getToiletList(HttpSession session,@RequestParam String data){
+        int id = getUserIdPara(session,data);
+        List<ToiletRecord> list = userService.getToiletList(id);
         return list;
     }
 

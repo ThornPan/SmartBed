@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+  <style type="text/css">
+    .grey {
+        color: #999;
+    }
+    .red {
+        color: #F00;
+    }
+    .green {
+        color: #3CC855;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="page-header">
+            <h2>注册</h2>
+        </div>
+        <form id="myform" class="form-horizontal" method="post"><!-- method="post" onsubmit="return beforeSubmit()">-->
+            <div class="form-group">
+                <label for="InputName" class="col-sm-2 control-label">身份证号：</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="InputID" name="InputID" onfocus="showTips(this)" onblur="checkInput(this)" placeholder="您的身份证号">
+                    <span class="tips">&nbsp;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputName" class="col-sm-2 control-label">姓名：</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="InputName" name="InputName" onfocus="showTips(this)" onblur="checkInput(this)" placeholder="您的姓名">
+                    <span class="tips">&nbsp;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputPwd" class="col-sm-2 control-label">密码：</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" name="InputPwd" id="InputPwd">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputRePwd" class="col-sm-2 control-label">确认密码：</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" name="InputRePwd" id="InputRePwd" onfocus="showTips(this)" onblur="checkInput(this)">
+                    <span class="tips">&nbsp;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputPhone" class="col-sm-2 control-label">联系方式：</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="InputPhone" name="InputPhone" onfocus="showTips(this)" onblur="checkInput(this)" placeholder="您的手机">
+                    <span class="tips">&nbsp;</span>
+                </div>
+                <span class="tips"></span>
+            </div>
+            <div class="form-group">
+                <label for="InputEmail" class="col-sm-2 control-label">邮箱：</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" name="InputEmail" onfocus="showTips(this)" onblur="checkInput(this)" placeholder="您的邮箱">
+                    <span class="tips">&nbsp;</span>
+                </div>
+                <span class="tips"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">性别：</label>
+                <div class="col-sm-5">
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadio" value="男" id="male">男
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadio" value="女" id="female">女
+                    </label> 
+                </div>
+            </div>
+            <div class="col-sm-1 col-sm-offset-2">
+                <input name="submit" class="btn btn-primary" value="注册" type="submit" onclick="register();return false;"/>
+            </div>
+            <div class="col-sm-1">
+                <input name="reset" class="btn btn-primary" value="重置" type="reset">
+            </div>
+            <div class="col-sm-1" style="margin-top:8px">
+                <a href="index.html">返回</a>
+            </div>
+            <div class="col-sm-1" style="margin-top:8px">
+                <button onclick="re()">reset</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

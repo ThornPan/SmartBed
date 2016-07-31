@@ -121,3 +121,118 @@ function getParameterList(){
 function getTurnList(){
 
 }
+
+function getAlarmList(){
+    var data=getUserIdPara(2);
+    $.ajax({
+        type:"POST",
+        url:getUrl()+'/api/getAlarmList',
+        data:{data:data},
+        dataType:'json',
+        success:function(msg) {
+            var count = msg.length;
+            $("#alarmBody").empty();
+            for (var i = 0; i < count; i++) {
+                var para = document.createElement("tr");
+
+                var nonode = document.createElement("td");
+                $(nonode).html(i+1);
+                $(para).append(nonode);
+
+                var atnode = document.createElement("td");
+                $(atnode).html(dataConvert(msg[i].addTime));
+                $(para).append(atnode);
+
+                var tpnode = document.createElement("td");
+                $(tpnode).html(msg[i].type);
+                $(para).append(tpnode);
+
+                $("#alarmBody").append(para);
+            }
+        }
+    })
+}
+
+function getTurnList(){
+    var data=getUserIdPara(2);
+    $.ajax({
+        type:"POST",
+        url:getUrl()+'/api/getTurnList',
+        data:{data:data},
+        dataType:'json',
+        success:function(msg) {
+            var count = msg.length;
+            $("#turnBody").empty();
+            for (var i = 0; i < count; i++) {
+                var para = document.createElement("tr");
+
+                var nonode = document.createElement("td");
+                $(nonode).html(i+1);
+                $(para).append(nonode);
+
+                var atnode = document.createElement("td");
+                $(atnode).html(dataConvert(msg[i].addTime));
+                $(para).append(atnode);
+
+                $("#turnBody").append(para);
+            }
+        }
+    })
+}
+function getMedicineList(){
+    var data = getUserIdPara(2);
+    $.ajax({
+        type:"POST",
+        url:getUrl()+'/api/getMedicineList',
+        data:{data:data},
+        dataType:'json',
+        success:function(msg) {
+            var count = msg.length;
+            $("#medicineBody").empty();
+            for (var i = 0; i < count; i++) {
+                var para = document.createElement("tr");
+
+                var atnode = document.createElement("td");
+                $(atnode).html(dataConvert(msg[i].addTime));
+                $(para).append(atnode);
+
+                var mnnode = document.createElement("td");
+                $(mnnode).html(msg[i].medicine);
+                $(para).append(mnnode);
+
+                var dnode = document.createElement("td");
+                $(dnode).html(msg[i].dosage);
+                $(para).append(dnode);
+
+                $("#medicineBody").append(para);
+            }
+        }
+    })
+}
+
+function getToiletList(){
+    var data = getUserIdPara(2);
+    $.ajax({
+        type:"POST",
+        url:getUrl()+'/api/getToiletList',
+        data:{data:data},
+        dataType:'json',
+        success:function(msg) {
+            var count = msg.length;
+            $("#toiletBody").empty();
+            for (var i = 0; i < count; i++) {
+                var para = document.createElement("tr");
+
+                var nonode = document.createElement("td");
+                $(nonode).html(i+1);
+                $(para).append(nonode);
+
+                var atnode = document.createElement("td");
+                $(atnode).html(dataConvert(msg[i].addTime));
+                $(para).append(atnode);
+
+                $("#toiletBody").append(para);
+            }
+        }
+    })
+}

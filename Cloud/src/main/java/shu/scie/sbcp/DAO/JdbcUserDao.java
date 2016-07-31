@@ -2,9 +2,8 @@ package shu.scie.sbcp.DAO;
 
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
-import shu.scie.sbcp.DAO.RowMapper.MedicalHistoryRowMapper;
-import shu.scie.sbcp.DAO.RowMapper.ParameterRowMapper;
-import shu.scie.sbcp.DAO.RowMapper.UserRowMapper;
+import org.w3c.dom.ls.LSException;
+import shu.scie.sbcp.DAO.RowMapper.*;
 import shu.scie.sbcp.domain.*;
 
 import java.sql.Timestamp;
@@ -30,6 +29,30 @@ public class JdbcUserDao extends JdbcDaoSupport implements UserDao {
     public List<Parameter> getParameterList(int id){
         String sql="select * from pararecord where id ="+id+" order by addtime desc";
         List<Parameter> list=(List<Parameter>)getJdbcTemplate().query(sql,new ParameterRowMapper());
+        return list;
+    }
+
+    public List<AlarmRecord> getAlarmList(int id){
+        String sql = "select * from alarmrecord where id ="+id+" order by addtime desc";
+        List<AlarmRecord> list = (List<AlarmRecord>)getJdbcTemplate().query(sql,new AlarmRowMapper());
+        return list;
+    }
+
+    public List<TurnRecord> getTurnList(int id){
+        String sql = "select * from turnrecord where id ="+id+" order by addtime desc";
+        List<TurnRecord> list = (List<TurnRecord>)getJdbcTemplate().query(sql,new TurnRowMapper());
+        return list;
+    }
+
+    public List<MedicineRecord> getMedicineList(int id){
+        String sql = "select * from medicinerecord where id ="+id+" order by addtime desc";
+        List<MedicineRecord> list = (List<MedicineRecord>)getJdbcTemplate().query(sql,new MedicineRowMapper());
+        return list;
+    }
+
+    public List<ToiletRecord> getToiletList(int id){
+        String sql = "select * from toiletrecord where id ="+id+" order by addtime desc";
+        List<ToiletRecord> list = (List<ToiletRecord>)getJdbcTemplate().query(sql,new ToiletRowMapper());
         return list;
     }
 

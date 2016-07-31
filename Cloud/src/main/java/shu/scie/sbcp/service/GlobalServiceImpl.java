@@ -32,5 +32,13 @@ public class GlobalServiceImpl implements GlobalService {
         globalDao.userLogout(id);
     }
 
+    public boolean checkFamilyID(String id){
+        return globalDao.checkFamilyID(id);
+    }
+
+    public void insertFamily(String id,String name,String pw,String phone){
+        globalDao.insertFamily(id,name,pw,phone);
+    }
+
 
 }

@@ -62,4 +62,18 @@ public class CommonController {
         globalService.userLogout(id);
         return "success";
     }
+
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    @ResponseBody
+    public String register(@RequestParam String id,@RequestParam String name,
+                           @RequestParam String pw,@RequestParam String phone){
+        System.out.println("register");
+        if(globalService.checkFamilyID(id)){
+            return "exist";
+        }else {
+            System.out.println("not exist");
+            globalService.insertFamily(id,name,pw,phone);
+            return "success";
+        }
+    }
 }

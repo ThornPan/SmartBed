@@ -23,4 +23,5 @@ public interface UserDao {
     void saveMedicineRecord(MedicineRecord medicineRecord);
     void updateUserInfo(User user);
     String getUserFamilyNum(int id);
+    boolean checkRelation(int id,String family);
 }

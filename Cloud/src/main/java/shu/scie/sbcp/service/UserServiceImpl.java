@@ -140,4 +140,8 @@ public class UserServiceImpl implements UserService {
             System.out.println("message fail");
         }
     }
+
+    public boolean checkRelation(int id,String family){
+        return userDao.checkRelation(id,family);
+    }
 }

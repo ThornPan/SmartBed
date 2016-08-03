@@ -9,4 +9,5 @@ public interface GlobalService {
     public void userLogout(int id);
     boolean checkFamilyID(String id);
     void insertFamily(String id,String name,String pw,String phone);
+    boolean checkFamilyAccount(String userId,String userPw);
 }

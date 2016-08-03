@@ -8,10 +8,10 @@ public class Family {
     private String name;
     private String phone;
 
-    public void setIdentity(String identity){
-        this.id=identity;
+    public void setId(String id){
+        this.id=id;
     }
-    public String getIdentity(){
+    public String getId(){
         return id;
     }
 

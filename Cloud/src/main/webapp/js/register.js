@@ -21,7 +21,7 @@ document.getElementById('fade').style.display='block';
 })*/
 
 //表单验证
-var flag = [false, false,false,false,false];
+var flag = [false, false,false,false];
 
 function showTips(_obj){
     tips = _obj.nextElementSibling;
@@ -59,11 +59,11 @@ var checkInput = function(_obj){
             if(RegExp("(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)").test(val)) {
                 tips.innerHTML = "身份证号格式正确";
                 tips.className = "tips green";
-                flag[4] = true;
+                flag[1] = true;
             } else {
                 tips.innerHTML = "请按正确的格式输入身份证号";
                 tips.className = "tips red";
-                flag[4] = false;
+                flag[1] = false;
             }
             break;
         case "InputName":
@@ -77,7 +77,7 @@ var checkInput = function(_obj){
                 flag[0] = false;
             }
             break;
-        case "InputEmail":
+        /*case "InputEmail":
             if(RegExp("\\w+([-+._]\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*").test(val)) {
                 tips.innerHTML = "邮箱地址格式正确";
                 tips.className = "tips green";
@@ -87,7 +87,7 @@ var checkInput = function(_obj){
                 tips.className = "tips red";
                 flag[1] = false;
             }
-            break;
+            break;*/
         case "InputRePwd":
             if(document.getElementById("InputPwd").value==document.getElementById("InputRePwd").value) {
                 tips.innerHTML = "两次密码一致";
@@ -116,7 +116,7 @@ var checkInput = function(_obj){
 };
 
 function beforeSubmit(){
-    for(i = 0; i <= 4; i++) {
+    for(i = 0; i <= 3; i++) {
         if(!flag[i]) {
             alert("信息填写不正确");
             return false;
@@ -127,7 +127,8 @@ function beforeSubmit(){
 };
 
 function register(){
-    for(i = 0; i <= 4; i++) {
+    console.log("注册");
+    for(i = 0; i <= 3; i++) {
         if(!flag[i]) {
             alert("信息填写不正确");
             return false;
@@ -145,6 +146,7 @@ function register(){
         success: function(msg){
             if(msg=="success"){
                 alert("注册成功");
+                $("#myform").reset();
             }else if(msg == "exist"){
                 alert("用户已存在");
             }

@@ -29,6 +29,12 @@ public class UserController {
             String type=(String)session.getAttribute("type");
             if(type.equals("admin")){
                 id=Integer.parseInt(data);
+            }else if(type.equals("family")){
+                id = Integer.parseInt(data);
+                String family = (String)session.getAttribute("id");
+                if(!userService.checkRelation(id,family)){
+                    id = 0;
+                }
             }
         }
         return id;

@@ -18,6 +18,7 @@ function getUserIdPara(type){
 
 function getUserInfo(){
     var data=getUserIdPara(1);
+    console.log(data);
     $.ajax({
         type:"POST",
         url:getUrl()+'/api/getUserInfo',

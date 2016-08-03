@@ -1,10 +1,10 @@
 package shu.scie.sbcp.DAO;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 import shu.scie.sbcp.domain.Family;
-import sun.invoke.empty.Empty;
 
 /**
  * Created by Thorn on 2016/6/29.
@@ -13,7 +13,11 @@ import sun.invoke.empty.Empty;
 public class JdbcGlobalDao extends JdbcDaoSupport implements GlobalDao {
     public String getUserName(String type,int id){
         String sql="select name from "+type+" where id = ?";
-        String name = (String)getJdbcTemplate().queryForObject(sql,new Object[]{id},String.class);
+        String name = null;
+        try {
+            name = (String)getJdbcTemplate().queryForObject(sql,new Object[]{id},String.class);
+        } catch (DataAccessException e) {
+        }
         return name;
     }
 

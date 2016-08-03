@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Cloud:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="Cloud:war exploded">
     <output-path>$PROJECT_DIR$/Cloud/target/smartbed</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">

@@ -24,18 +24,37 @@ function getUrl(){
 	var urlRemote="http://www.znhlc.xyz:8080/smartbed";
 	var urlLocalMvn="http://localhost:8080/smartbed";
 	var urlLocalIde="http://localhost:8080";
-	return urlLocalIde;
+	return urlRemote;
 }
 
 function dataConvert(timestamp){
 	var timestamp =timestamp;
 	var d = new Date(timestamp*1);    //根据时间戳生成的时间对象
-	var date = (d.getFullYear()) + "-" +
+
+	var yr = d.getFullYear();
+
+	var mt = d.getMonth() + 1;
+	if(mt < 10) mt = "0" + mt;
+
+	var day = d.getDate();
+	if(day < 10) day = "0" + day;
+
+	var hr = d.getHours();
+	if(hr < 10) hr = "0" + hr;
+
+	var min = d.getMinutes();
+	if(min < 10) min = "0" + min;
+
+	var sec = d.getSeconds();
+	if(sec < 10) sec = "0" + sec;
+
+	var date = yr + "-" + mt + "-" + day + " " + hr + ":" + min + ":" +sec;
+	/*var date = (d.getFullYear()) + "-" +
 		(d.getMonth() + 1) + "-" +
 		(d.getDate()) + " " +
 		(d.getHours()) + ":" +
 		(d.getMinutes()) + ":" +
-		(d.getSeconds());
+		(d.getSeconds());*/
 	return date;
 }
 

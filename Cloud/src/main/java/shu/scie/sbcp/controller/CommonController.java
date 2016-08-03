@@ -28,28 +28,40 @@ public class CommonController {
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
-    public String login(HttpSession session, @RequestParam Integer userId,
+    public String login(HttpSession session, @RequestParam String userId,
                  @RequestParam String userPw, @RequestParam String userType,
                         @RequestParam String source) {
         String success="success";
         String fail="fail";
-        if(globalService.checkAccount(userType,userId,userPw)){
-            session.setAttribute("id",userId);
-            session.setAttribute("type",userType);
-            if(source.equals("device")){
-                globalService.userLogin(userId);
+        if(userType.equals("family")){
+            System.out.println(userId);
+            if(globalService.checkFamilyAccount(userId,userPw)){
+                session.setAttribute("id",userId);
+                session.setAttribute("type",userType);
+                return success;
+            } else {
+                return fail;
             }
-            return success;
-        }else{
-            return fail;
+        } else {
+            System.out.println("int");
+            if(globalService.checkAccount(userType,Integer.parseInt(userId),userPw)){
+                session.setAttribute("id",Integer.parseInt(userId));
+                session.setAttribute("type",userType);
+                if(source.equals("device")){
+                    globalService.userLogin(Integer.parseInt(userId));
+                }
+                return success;
+            }else{
+                return fail;
+            }
         }
+
     }
 
     @RequestMapping(value = "/logout",method = RequestMethod.POST)
     public @ResponseBody String logout(HttpSession session,@RequestParam String source){
-        int id=(Integer)session.getAttribute("id");
-        String type=(String) session.getAttribute("type");
         if(source.equals("device")){
+            int id=(Integer)session.getAttribute("id");
             globalService.userLogout(id);
         }
         session.removeAttribute("id");
@@ -68,6 +80,7 @@ public class CommonController {
     public String register(@RequestParam String id,@RequestParam String name,
                            @RequestParam String pw,@RequestParam String phone){
         System.out.println("register");
+        System.out.println("注册");
         if(globalService.checkFamilyID(id)){
             return "exist";
         }else {

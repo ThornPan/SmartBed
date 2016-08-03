@@ -40,5 +40,7 @@ public class GlobalServiceImpl implements GlobalService {
         globalDao.insertFamily(id,name,pw,phone);
     }
 
-
+    public boolean checkFamilyAccount(String userId, String userPw){
+        return true;
+    }
 }

@@ -4,6 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import shu.scie.sbcp.domain.*;
 
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -24,4 +25,5 @@ public interface UserService {
     void uploadToiletRecord(JSONObject jsonToiletRecord)throws JSONException;
     void uploadMedicineRecord(JSONObject jsonMedicineRecord)throws JSONException;
     void updateUserInfo(JSONObject jsonUserInfo)throws JSONException;
+    boolean checkRelation(int id,String family);
 }

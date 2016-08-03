@@ -1,5 +1,6 @@
 package shu.scie.sbcp.DAO;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.w3c.dom.ls.LSException;
@@ -113,5 +114,19 @@ public class JdbcUserDao extends JdbcDaoSupport implements UserDao {
     public void updateUserInfo(User user){
         String sql="update user set name = ? , age = ? , sex = ? where id = ?";
         getJdbcTemplate().update(sql,user.getName(),user.getAge(),user.getSex(),user.getId());
+    }
+
+    public boolean checkRelation(int id,String family){
+        int n = 0;
+        String sql = "select id from relation where userid = " + id + " and relativeid = " + family;
+        try {
+            n = getJdbcTemplate().queryForObject(sql,Integer.class);
+        }catch (EmptyResultDataAccessException e){
+
+        }
+        if(n == 0){
+            return false;
+        }
+        return true;
     }
 }

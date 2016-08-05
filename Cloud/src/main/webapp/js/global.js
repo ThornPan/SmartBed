@@ -24,7 +24,7 @@ function getUrl(){
 	var urlRemote="http://www.znhlc.xyz:8080/smartbed";
 	var urlLocalMvn="http://localhost:8080/smartbed";
 	var urlLocalIde="http://localhost:8080";
-	return urlRemote;
+	return urlLocalIde;
 }
 
 function dataConvert(timestamp){

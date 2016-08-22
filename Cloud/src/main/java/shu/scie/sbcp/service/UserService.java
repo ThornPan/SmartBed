@@ -13,8 +13,10 @@ import java.util.List;
 public interface UserService {
     User getUserInfo(int id);
     List<MedicalHistory> getMedicalHistoryList(int id);
-    List<Parameter> getParameterList(int id);
-    List<AlarmRecord> getAlarmList(int id);
+    //List<Parameter> getParameterList(int id);
+    JSONObject getParameter(int id,int curPage,int pageSize) throws JSONException;
+    //List<AlarmRecord> getAlarmList(int id);
+    JSONObject getAlarmList(int id,int curPage,int pageSize) throws JSONException;
     List<TurnRecord> getTurnList(int id);
     List<MedicineRecord> getMedicineList(int id);
     List<ToiletRecord> getToiletList(int id);

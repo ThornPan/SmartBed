@@ -1,6 +1,12 @@
 /**
  * Created by Thorn on 2016/6/23.
  */
+var recordCount;
+var rowPerPage = 10;
+var pageType = "";
+
+
+
 function getUserIdPara(type){
     var data="user";
     if(type==1){
@@ -33,8 +39,14 @@ function getUserInfo(){
     })
 }
 
-function getUserMedicalHistoryList(){
+function getUserMedicalHistoryList(curPage, pageSize){
+    $("#medicalHistoryListBody").empty();
+    $("#recordCount").html('0');
+    $('#MainContent_AspNetPager_Msg').html(" <a disabled='disabled' style='margin-right:5px;'>← 上一页</a><span class='cpb' style='margin-right:5px;'>1</span><a disabled='disabled' style='margin-right:5px;'>下一页 →</a>");
+    $('#CurrentPageSize').html(curPage);//页
+
     var data=getUserIdPara(2);
+
     $.ajax({
         type:"POST",
         url:getUrl()+'/api/getMedicalHistoryList',
@@ -63,92 +75,196 @@ function getUserMedicalHistoryList(){
     })
 }
 
-function getParameterList(){
+function getParameter(){
+    pageType = "parameter"
+    getParameterList(1, rowPerPage);
+}
+
+function getParameterList(curPage, pageSize){
+    $("#paraBody").empty();
+    $("#recordCount").html('0');
+    $('#MainContent_AspNetPager_Msg').html(" <a disabled='disabled' style='margin-right:5px;'>← 上一页</a><span class='cpb' style='margin-right:5px;'>1</span><a disabled='disabled' style='margin-right:5px;'>下一页 →</a>");
+    $('#CurrentPageSize').html(curPage);//页
+
     var data=getUserIdPara(2);
+
     $.ajax({
         type:"POST",
         url:getUrl()+'/api/getParameterList',
-        data:{data:data},
+        data:{data:data,curPage:curPage,pageSize:pageSize},
         dataType:'json',
         success:function(msg){
-            var count=msg.length;
-            $("#paraBody").empty();
-            for(var i=0;i<count;i++){
-                var para=document.createElement("tr");
-                if(msg[i].danger==true){
-                    $(para).attr("class","danger");
-                }else {
-                    $(para).attr("class","success");
+            if(msg == null){
+                $("#paraBody").html("<tr><td colspan='6' class='red'>未查询到数据！</td></tr>");
+            } else if(msg != null){
+                if(rowPerPage < msg.list.length){
+                    var count = rowPerPage;
+                } else {
+                    var count = msg.list.length;
+                }
+                for(var i=0;i<count;i++){
+                    var para=document.createElement("tr");
+                    if(msg.list[i].danger==true){
+                        $(para).attr("class","danger");
+                    }else {
+                        $(para).attr("class","success");
+                    }
+
+                    var btnode=document.createElement("td");
+                    $(btnode).html(msg.list[i].bodyTemperature);
+                    $(para).append(btnode);
+
+                    var dbpnode=document.createElement("td");
+                    $(dbpnode).html(msg.list[i].diastolicPressure);
+                    $(para).append(dbpnode);
+
+                    var sbpnode=document.createElement("td");
+                    $(sbpnode).html(msg.list[i].systolicPressure);
+                    $(para).append(sbpnode);
+
+                    var abpnode=document.createElement("td");
+                    $(abpnode).html(msg.list[i].averagePressure);
+                    $(para).append(abpnode);
+
+                    var bonode=document.createElement("td");
+                    $(bonode).html(msg.list[i].bloodOxygen);
+                    $(para).append(bonode);
+
+                    var bgnode=document.createElement("td");
+                    $(bgnode).html(msg.list[i].bloodGlucose);
+                    $(para).append(bgnode);
+
+                    var hrnode=document.createElement("td");
+                    $(hrnode).html(msg.list[i].heartRate);
+                    $(para).append(hrnode);
+
+                    var atnode=document.createElement("td");
+                    //$(atnode).html(dataConvert(msg.list[i].addTime));
+                    $(atnode).html(msg.list[i].addTime);
+                    $(para).append(atnode);
+
+                    $("#paraBody").append(para);
                 }
 
-                var btnode=document.createElement("td");
-                $(btnode).html(msg[i].bodyTemperature);
-                $(para).append(btnode);
+                recordCount = msg.recordCount;
+                $("#recordCount").html(recordCount);
 
-                var dbpnode=document.createElement("td");
-                $(dbpnode).html(msg[i].diastolicPressure);
-                $(para).append(dbpnode);
+                var maxPage = recordCount % pageSize == 0 ? parseInt(recordCount / pageSize) : (parseInt(recordCount / pageSize) + 1);
 
-                var sbpnode=document.createElement("td");
-                $(sbpnode).html(msg[i].systolicPressure);
-                $(para).append(sbpnode);
+                $('#MainContent_AspNetPager_Msg').html('');//分页链接
+                var span = "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)' onclick='PageIndexClick(this)' id='TopPage' pageindex='0'>← 上一页</a>";
+                var firstPage = 0;
+                var pagecount = 0;//循环的次数
+                if (maxPage > 10) {
+                    pagecount = 10;
+                } else {
+                    pagecount = maxPage;
+                }
+                if (curPage > 10) {
+                    pagecount = curPage;
+                    var firstPage = curPage - 10;
+                    if (firstPage >= 1) {
+                        span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)'  onclick='CurPageSizeClick(" + firstPage + ",this)' >...</a>";
+                    }
+                }
+                for (var j = firstPage + 1; j < pagecount + 1; j++) {
+                    if (j == curPage) {
+                        span += "<span class='cpb' style='margin-right: 5px; cursor: pointer;' onclick='CurPageSizeClick(" + j + ",this)'>" + j + "</span>";
+                    } else {
+                        span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)'  onclick='CurPageSizeClick(" + j + ",this)' >" + j + "</a>";
+                    }
+                }
+                pagecount = pagecount + 1;
+                if (maxPage >= pagecount) {
+                    span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)'  onclick='CurPageSizeClick(" + pagecount + ",this)' >...</a>";
+                }
+                span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)' onclick='PageIndexClick(this)' id='NextPage' pageindex='0'>→ 下一页</a>";
+                $('#MainContent_AspNetPager_Msg').html(span);
 
-                var abpnode=document.createElement("td");
-                $(abpnode).html(msg[i].averagePressure);
-                $(para).append(abpnode);
 
-                var bonode=document.createElement("td");
-                $(bonode).html(msg[i].bloodOxygen);
-                $(para).append(bonode);
-
-                var bgnode=document.createElement("td");
-                $(bgnode).html(msg[i].bloodGlucose);
-                $(para).append(bgnode);
-
-                var hrnode=document.createElement("td");
-                $(hrnode).html(msg[i].heartRate);
-                $(para).append(hrnode);
-
-                var atnode=document.createElement("td");
-                $(atnode).html(dataConvert(msg[i].addTime));
-                $(para).append(atnode);
-
-                $("#paraBody").append(para);
             }
         }
     })
 }
 
-function getTurnList(){
-
+function getAlarm(){
+    pageType = "alarm"
+    getAlarmList(1, rowPerPage);
 }
 
-function getAlarmList(){
+function getAlarmList(curPage, pageSize){
+    $("#alarmBody").empty();
+    $("#recordCount").html('0');
+    $('#MainContent_AspNetPager_Msg').html(" <a disabled='disabled' style='margin-right:5px;'>← 上一页</a><span class='cpb' style='margin-right:5px;'>1</span><a disabled='disabled' style='margin-right:5px;'>下一页 →</a>");
+    $('#CurrentPageSize').html(curPage);//页
+
     var data=getUserIdPara(2);
     $.ajax({
         type:"POST",
         url:getUrl()+'/api/getAlarmList',
-        data:{data:data},
+        data:{data:data,curPage:curPage,pageSize:pageSize},
         dataType:'json',
         success:function(msg) {
-            var count = msg.length;
-            $("#alarmBody").empty();
-            for (var i = 0; i < count; i++) {
-                var para = document.createElement("tr");
+            if(msg == null){
+                $("#paraBody").html("<tr><td colspan='6' class='red'>未查询到数据！</td></tr>");
+            } else if(msg != null){
+                if(rowPerPage < msg.list.length){
+                    var count = rowPerPage;
+                } else {
+                    var count = msg.list.length;
+                }
+                for (var i = 0; i < count; i++) {
+                    var para = document.createElement("tr");
 
-                var nonode = document.createElement("td");
-                $(nonode).html(i+1);
-                $(para).append(nonode);
+                    var nonode = document.createElement("td");
+                    $(nonode).html(i+1);
+                    $(para).append(nonode);
 
-                var atnode = document.createElement("td");
-                $(atnode).html(dataConvert(msg[i].addTime));
-                $(para).append(atnode);
+                    var atnode = document.createElement("td");
+                    $(atnode).html(msg.list[i].addTime);
+                    $(para).append(atnode);
 
-                var tpnode = document.createElement("td");
-                $(tpnode).html(msg[i].type);
-                $(para).append(tpnode);
+                    var tpnode = document.createElement("td");
+                    $(tpnode).html(msg.list[i].type);
+                    $(para).append(tpnode);
 
-                $("#alarmBody").append(para);
+                    $("#alarmBody").append(para);
+                }
+
+                recordCount = msg.recordCount;
+                $("#recordCount").html(recordCount);
+
+                var maxPage = recordCount % pageSize == 0 ? parseInt(recordCount / pageSize) : (parseInt(recordCount / pageSize) + 1);
+
+                $('#MainContent_AspNetPager_Msg').html('');//分页链接
+                var span = "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)' onclick='PageIndexClick(this)' id='TopPage' pageindex='0'>← 上一页</a>";
+                var firstPage = 0;
+                var pagecount = 0;//循环的次数
+                if (maxPage > 10) {
+                    pagecount = 10;
+                } else {
+                    pagecount = maxPage;
+                }
+                if (curPage > 10) {
+                    pagecount = curPage;
+                    var firstPage = curPage - 10;
+                    if (firstPage >= 1) {
+                        span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)'  onclick='CurPageSizeClick(" + firstPage + ",this)' >...</a>";
+                    }
+                }
+                for (var j = firstPage + 1; j < pagecount + 1; j++) {
+                    if (j == curPage) {
+                        span += "<span class='cpb' style='margin-right: 5px; cursor: pointer;' onclick='CurPageSizeClick(" + j + ",this)'>" + j + "</span>";
+                    } else {
+                        span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)'  onclick='CurPageSizeClick(" + j + ",this)' >" + j + "</a>";
+                    }
+                }
+                pagecount = pagecount + 1;
+                if (maxPage >= pagecount) {
+                    span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)'  onclick='CurPageSizeClick(" + pagecount + ",this)' >...</a>";
+                }
+                span += "<a style='margin-right: 5px; cursor: pointer;' href='javascript:void(0)' onclick='PageIndexClick(this)' id='NextPage' pageindex='0'>→ 下一页</a>";
+                $('#MainContent_AspNetPager_Msg').html(span);
             }
         }
     })
@@ -236,4 +352,66 @@ function getToiletList(){
             }
         }
     })
+}
+
+//首页、上一页、下一页、尾页点击
+function PageIndexClick(obj) {
+    //当前第几页
+    var CurrenPageSize = $.trim($('#CurrentPageSize').html());
+    if (CurrenPageSize != '') {
+        CurrenPageSize = parseInt(CurrenPageSize);
+    }
+    //id
+    var type = $(obj).attr('id');
+    //首页
+    if (type == 'FirstPage') {
+        CurrenPageSize = 1;
+        //AjaxPage(CurrenPageSize, PageSize);
+        $('#CurrentPageSize').html('1');
+    }
+    //上一页
+    else if (type == 'TopPage') {
+        if (CurrenPageSize > 1) {
+            CurrenPageSize = CurrenPageSize - 1;
+        } else {
+            CurrenPageSize = 1;
+        }
+        if(pageType == "parameter"){
+            getParameterList(CurrenPageSize,rowPerPage);
+        }else if(pageType == "alarm"){
+            getAlarmList(CurrenPageSize,rowPerPage);
+        }
+        //AjaxPage(CurrenPageSize, PageSize);
+        $('#CurrentPageSize').html(CurrenPageSize);
+    }
+    //下一页
+    else if (type == 'NextPage') {
+        var size = CurrenPageSize + 1;
+        var maxpage = recordCount % rowPerPage == 0 ? parseInt(recordCount / rowPerPage) : (parseInt(recordCount /rowPerPage) + 1);
+        if (size <= maxpage) {
+            CurrenPageSize = CurrenPageSize + 1
+        }
+        if(pageType == "parameter"){
+            getParameterList(CurrenPageSize,rowPerPage);
+        }else if(pageType == "alarm"){
+            getAlarmList(CurrenPageSize,rowPerPage);
+        }
+        $('#CurrentPageSize').html(CurrenPageSize);
+    }
+    //尾页
+    else if (type == 'LastPage') {
+        CurrenPageSize = recordCount % rowPerPage == 0 ? parseInt(recordCount / rowPerPage) : (parseInt(recordCount /rowPerPage) + 1);
+        //AjaxPage(CurrenPageSize, PageSize);
+        $('#CurrentPageSize').html(CurrenPageSize);
+    }
+}
+
+//页数点击
+function CurPageSizeClick(curPage, obj) {
+    $('#CurrentPageSize').html(curPage);
+    if(pageType == "parameter"){
+        getParameterList(curPage,rowPerPage);
+    }else if(pageType == "alarm"){
+        getAlarmList(curPage,rowPerPage);
+    }
 }

@@ -11,8 +11,8 @@ import java.util.List;
 public interface UserDao {
     User getUserInfo(int id);
     List<MedicalHistory> getMedicalHistoryList(int id);
-    List<Parameter> getParameterList(int id);
-    List<AlarmRecord> getAlarmList(int id);
+    List<Parameter> getParameterList(int id,int curPage,int pageSize);
+    List<AlarmRecord> getAlarmList(int id,int curPage,int pageSize);
     List<TurnRecord> getTurnList(int id);
     List<MedicineRecord> getMedicineList(int id);
     List<ToiletRecord> getToiletList(int id);

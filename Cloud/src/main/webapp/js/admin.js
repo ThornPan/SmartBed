@@ -17,6 +17,7 @@ function showAdminInfo(){
 }
 
 function refreshUserList(){
+    //getUserList();
     setInterval("getUserList()",1000);
 }
 

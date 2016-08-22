@@ -15,6 +15,9 @@ public class ParameterRowMapper implements RowMapper {
         parameter.setId(rs.getInt("id"));
         parameter.setAddTime(rs.getTimestamp("addtime"));
         parameter.setBodyTemperature(rs.getFloat("bt"));
+        /*System.out.println(rs.getFloat("bt"));
+        System.out.println(String.valueOf(rs.getFloat("bt")));
+        System.out.println("bt"+parameter.getBodyTemperature());*/
         parameter.setDiastolicPressure(rs.getFloat("dbp"));
         parameter.setSystolicPressure(rs.getFloat("sbp"));
         parameter.setAveragePressure(rs.getFloat("abp"));

@@ -5,6 +5,7 @@ import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.request.AlibabaAliqinFcSmsNumSendRequest;
 import com.taobao.api.response.AlibabaAliqinFcSmsNumSendResponse;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,12 +40,50 @@ public class UserServiceImpl implements UserService {
         return userDao.getMedicalHistoryList(id);
     }
 
-    public List<Parameter> getParameterList(int id){
+    /*public List<Parameter> getParameterList(int id){
         return userDao.getParameterList(id);
+    }*/
+
+    public JSONObject getParameter(int id,int curPage,int pageSize)throws JSONException{
+        JSONObject jsonObject = new JSONObject();
+        List<Parameter> list = userDao.getParameterList(id,curPage,pageSize);
+        jsonObject.put("recordCount",list.size());
+        JSONArray jsonArray = new JSONArray();
+        int i = (curPage-1)*pageSize;
+        while (i < curPage*pageSize && i<list.size()){
+            JSONObject object = new JSONObject();
+            object.put("danger",list.get(i).isDanger());
+            object.put("bodyTemperature",String.valueOf(list.get(i).getBodyTemperature()));
+            object.put("diastolicPressure",String.valueOf(list.get(i).getDiastolicPressure()));
+            object.put("systolicPressure",String.valueOf(list.get(i).getSystolicPressure()));
+            object.put("averagePressure",String.valueOf(list.get(i).getAveragePressure()));
+            object.put("bloodOxygen",String.valueOf(list.get(i).getBloodOxygen()));
+            object.put("bloodGlucose",String.valueOf(list.get(i).getBloodGlucose()));
+            object.put("heartRate",String.valueOf(list.get(i).getHeartRate()));
+            object.put("addTime",String.valueOf(list.get(i).getAddTime()));
+            jsonArray.put(object);
+            i++;
+        }
+        jsonObject.put("list",jsonArray);
+        //System.out.println(jsonObject.toString());
+        return  jsonObject;
     }
 
-    public List<AlarmRecord> getAlarmList(int id){
-        return userDao.getAlarmList(id);
+    public JSONObject getAlarmList(int id,int curPage,int pageSize)throws JSONException{
+        JSONObject jsonObject = new JSONObject();
+        List<AlarmRecord> list = userDao.getAlarmList(id,curPage,pageSize);
+        jsonObject.put("recordCount",list.size());
+        JSONArray jsonArray = new JSONArray();
+        int i = (curPage-1)*pageSize;
+        while (i < curPage*pageSize && i<list.size()){
+            JSONObject object = new JSONObject();
+            object.put("addTime",list.get(i).getAddTime());
+            object.put("type",list.get(i).getType());
+            jsonArray.put(object);
+            i++;
+        }
+        jsonObject.put("list",jsonArray);
+        return jsonObject;
     }
 
     public List<TurnRecord> getTurnList(int id){

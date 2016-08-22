@@ -58,18 +58,25 @@ public class UserController {
 
     @RequestMapping(value = "/getParameterList",method = RequestMethod.POST)
     @ResponseBody
-    public List<Parameter> getParameterList(HttpSession session,@RequestParam String data){
+    public String getParameterList(HttpSession session,@RequestParam String data,
+                                            @RequestParam int curPage,
+                                            @RequestParam int pageSize) throws JSONException{
         int id=getUserIdPara(session,data);
-        List<Parameter> list=userService.getParameterList(id);
-        return list;
+        JSONObject jsonObject = userService.getParameter(id,curPage,pageSize);
+
+        //List<Parameter> list=userService.getParameterList(id);
+        return jsonObject.toString();
     }
 
     @RequestMapping(value = "/getAlarmList",method = RequestMethod.POST)
     @ResponseBody
-    public List<AlarmRecord> getAlarmList(HttpSession session,@RequestParam String data){
+    public String getAlarmList(HttpSession session,@RequestParam String data,
+                               @RequestParam int curPage,
+                               @RequestParam int pageSize) throws JSONException{
         int id = getUserIdPara(session,data);
-        List<AlarmRecord> list = userService.getAlarmList(id);
-        return list;
+        JSONObject jsonObject = userService.getAlarmList(id,curPage,pageSize);
+        //List<AlarmRecord> list = userService.getAlarmList(id);
+        return jsonObject.toString();
     }
 
     @RequestMapping(value = "/getTurnList",method = RequestMethod.POST)

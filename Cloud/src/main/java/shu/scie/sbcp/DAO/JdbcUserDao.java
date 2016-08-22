@@ -27,13 +27,13 @@ public class JdbcUserDao extends JdbcDaoSupport implements UserDao {
         return list;
     }
 
-    public List<Parameter> getParameterList(int id){
+    public List<Parameter> getParameterList(int id,int curPage,int pageSize){
         String sql="select * from pararecord where id ="+id+" order by addtime desc";
         List<Parameter> list=(List<Parameter>)getJdbcTemplate().query(sql,new ParameterRowMapper());
         return list;
     }
 
-    public List<AlarmRecord> getAlarmList(int id){
+    public List<AlarmRecord> getAlarmList(int id,int curPage,int pageSize){
         String sql = "select * from alarmrecord where id ="+id+" order by addtime desc";
         List<AlarmRecord> list = (List<AlarmRecord>)getJdbcTemplate().query(sql,new AlarmRowMapper());
         return list;

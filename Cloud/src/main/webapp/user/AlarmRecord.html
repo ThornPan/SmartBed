@@ -13,7 +13,7 @@
 	
   </head>
   
-  <body onload="getAlarmList()">
+  <body onload="getAlarm()">
 
 	<div class="tabbable" id="tabs-686362">
 		<ul class="nav nav-tabs">
@@ -42,30 +42,17 @@
 
 						</tbody>
 					</table>
-					<ul class="pagination">
-						<li>
-							<a href="#">Prev</a>
-						</li>
-						<li>
-							<a href="#">1</a>
-						</li>
-						<li>
-							<a href="#">2</a>
-						</li>
-						<li>
-							<a href="#">3</a>
-						</li>
-						<li>
-							<a href="#">4</a>
-						</li>
-						<li>
-							<a href="#">5</a>
-						</li>
-						<li>
-							<a href="#">Next</a>
-						</li>
-					</ul>
 				</div>
+			</div>
+
+			<div class="col-md-7">
+				<div style="font-size: 14px;">共<label style="color: #20A8D8; font-size: 14px;" id="recordCount">0</label>条记录</div>
+			</div>
+
+			<div class="col-md-7">
+				<div id="MainContent_AspNetPager_Msg" class="paginator">
+				</div>
+				<div class="hidden" id="CurrentPageSize">1</div>
 			</div>
 
 		</div>

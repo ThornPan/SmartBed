@@ -43,7 +43,6 @@ public class CommonController {
                 return fail;
             }
         } else {
-            System.out.println("int");
             if(globalService.checkAccount(userType,Integer.parseInt(userId),userPw)){
                 session.setAttribute("id",Integer.parseInt(userId));
                 session.setAttribute("type",userType);

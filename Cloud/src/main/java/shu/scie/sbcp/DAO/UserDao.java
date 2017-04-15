@@ -24,4 +24,6 @@ public interface UserDao {
     void updateUserInfo(User user);
     String getUserFamilyNum(int id);
     boolean checkRelation(int id,String family);
+    void saveBedData(BedData bedData);
+    BedData getBedData(int userId);
 }

@@ -28,4 +28,6 @@ public interface UserService {
     void uploadMedicineRecord(JSONObject jsonMedicineRecord)throws JSONException;
     void updateUserInfo(JSONObject jsonUserInfo)throws JSONException;
     boolean checkRelation(int id,String family);
+    String uploadBedData(BedData bedData);
+    BedData getBedData(int userId);
 }

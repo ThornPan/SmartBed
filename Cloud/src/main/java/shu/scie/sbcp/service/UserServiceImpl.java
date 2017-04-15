@@ -183,4 +183,17 @@ public class UserServiceImpl implements UserService {
     public boolean checkRelation(int id,String family){
         return userDao.checkRelation(id,family);
     }
+
+    public String uploadBedData(BedData bedData) {
+        try {
+            userDao.saveBedData(bedData);
+            return "success";
+        } catch (Exception e){
+            return e.getMessage();
+        }
+    }
+
+    public BedData getBedData(int userId) {
+        return userDao.getBedData(userId);
+    }
 }

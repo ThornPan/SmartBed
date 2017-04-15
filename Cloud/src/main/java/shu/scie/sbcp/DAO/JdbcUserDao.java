@@ -9,6 +9,7 @@ import shu.scie.sbcp.domain.*;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Thorn on 2016/6/30.
@@ -128,5 +129,42 @@ public class JdbcUserDao extends JdbcDaoSupport implements UserDao {
             return false;
         }
         return true;
+    }
+
+    public void saveBedData(BedData bedData) {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        String checkSql = "select * from bed_data where user_id = " + bedData.getUserId();
+        System.out.println(checkSql);
+        List<BedData> persistenceData = getJdbcTemplate().query(checkSql, new BedDataRowMapper());
+        if (persistenceData.isEmpty()){
+            String insertSql = "insert into bed_data values(?,?,?,?,?,?,?,?)";
+            getJdbcTemplate().update(insertSql,
+                    bedData.getUserId(),
+                    bedData.getWeight(),
+                    bedData.getDegree1(),
+                    bedData.getDegree2(),
+                    bedData.getDegree3(),
+                    bedData.getDegree4(),
+                    bedData.getDegree5(),
+                    timestamp);
+        } else {
+            String updateSql = "update bed_data set weight = ?, degree_1 = ?, degree_2 = ?, " +
+                    "degree_3 = ?, degree_4 = ?, degree_5 = ?, delta_time = ? where user_id = ?";
+            getJdbcTemplate().update(updateSql,
+                    bedData.getWeight(),
+                    bedData.getDegree1(),
+                    bedData.getDegree2(),
+                    bedData.getDegree3(),
+                    bedData.getDegree4(),
+                    bedData.getDegree5(),
+                    timestamp,
+                    bedData.getUserId());
+        }
+    }
+
+    public BedData getBedData(int userId) {
+        String checkSql = "select * from bed_data where user_id = " + userId;
+        BedData bedData = (BedData) getJdbcTemplate().queryForObject(checkSql, new BedDataRowMapper());
+        return bedData;
     }
 }

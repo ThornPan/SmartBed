@@ -146,4 +146,16 @@ public class UserController {
         return "success";
 
     }
+
+    @RequestMapping(value = "/uploadBedData", method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadData(BedData bedData){
+        return userService.uploadBedData(bedData);
+    }
+
+    @RequestMapping(value = "/getBedData", method = RequestMethod.POST)
+    @ResponseBody
+    public BedData getBedData(@RequestParam int userId){
+        return userService.getBedData(userId);
+    }
 }
